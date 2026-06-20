@@ -1,0 +1,5 @@
+model,test_roc_auc,test_recall_def,test_f1,test_avg_prec,cv_auc_mean,cv_auc_std,cv_recall_mean,cv_recall_std
+GradientBoosting,0.9127,0.6957,0.7698,0.8733,0.9189,0.0152,0.6837,0.039
+RandomForest,0.9044,0.677,0.7569,0.8634,0.9212,0.0138,0.7023,0.0394
+ExtraTrees,0.8974,0.677,0.7491,0.8539,0.9193,0.0168,0.6946,0.044
+LogisticRegression,0.8725,0.7329,0.7284,0.8422,0.8934,0.022,0.7457,0.0431

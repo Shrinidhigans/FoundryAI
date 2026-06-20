@@ -1,0 +1,27 @@
+"""Plain-English definitions for the unified Main Analytics page."""
+
+MAIN_TERMS: dict[str, str] = {
+    "Accuracy": "How often the AI prediction matches what actually happened, across all batches.",
+    "Defect Probability": "The estimated chance that this casting batch may develop a manufacturing defect.",
+    "Risk Score": "A combined number showing overall quality concern for a batch (0–100).",
+    "Anomaly Score": "How unusual this batch looks compared with normal production batches.",
+    "Critical Risk": "Highest concern level — batch should be held or stopped until reviewed.",
+    "Feature Importance": "Which measurements the AI relies on most when deciding defect risk.",
+    "Correlation": "Whether two process values tend to move together across batches.",
+    "Chemistry Stability": "How steady key chemistry elements stay within acceptable ranges.",
+    "Shrinkage": "Metal volume loss during solidification that can cause internal or surface defects.",
+    "Gas Risk": "Risk of gas-related porosity or blowholes in the casting.",
+    "Mg Recovery": "How much magnesium remained effective after nodularizing treatment.",
+    "Pouring Temperature": "Metal temperature when poured into the mold.",
+    "Tapping Temperature": "Metal temperature when tapped from the furnace.",
+    "Fleet": "All castings/batches uploaded together in your Excel file.",
+    "Casting": "One production heat or pour — one row in your upload.",
+    "Batch": "Same as a casting/heat — one melting cycle in the plant data.",
+    "Cluster": "A group of similar operating conditions found in historical data.",
+    "Recommendation": "AI advice: PROCEED, MONITOR, HOLD, or STOP before pouring.",
+    "Confidence": "How strongly the system supports its risk recommendation.",
+    "Defect Driver": "A process or chemistry factor that most pushes defect risk up or down.",
+    "Anomaly Severity": "Label for how extreme the anomaly is: NORMAL through CRITICAL.",
+    "Process Stability": "How consistent temperatures, timing, and process signals are across batches.",
+    "Fleet Quality Score": "Overall health score of all uploaded castings combined (higher is better).",
+}

@@ -1,0 +1,5 @@
+cluster,tapping_temp,pouring_temp,ce,mn_1,ce_1,feat_ce_calculated,feat_ce_hypo_risk,feat_ce_hyper_risk,feat_ce_optimal,feat_temp_loss,feat_temp_loss_risk,feat_temp_loss_low,feat_shrinkage_risk_index,feat_gas_risk_index,feat_chemistry_instability,feat_chemistry_ok,defect_rate,batch_count,interpretation
+0,1434.0172,1368.145,4.2671,0.1763,0.0034,4.2671,0.0049,0.0369,0.9582,65.8722,0.0246,0.0,0.0074,0.0,0.0,1.0,0.3587,407,Defect rate: 35.9%
+1,1436.7604,1370.285,4.2102,0.1984,0.0033,4.2102,0.4047,0.009,0.5863,66.4755,0.0538,0.0,0.6071,0.0011,0.0,1.0,0.2132,1895,Defect rate: 21.3%
+2,1448.2419,1382.2319,4.1716,0.1774,0.0015,4.1716,0.7282,0.0,0.2718,66.01,0.0599,0.0,1.0923,0.0,0.0,1.0,0.3641,401,Defect rate: 36.4%
+3,1421.9091,1365.1364,3.9325,0.361,0.0019,3.9325,0.9909,0.0,0.0091,56.7727,0.0091,0.0,1.4864,0.0045,0.0,1.0,1.0,110,Defect rate: 100.0%

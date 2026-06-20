@@ -1,0 +1,79 @@
+============================================================
+INDUSTRIAL AI CASTING QUALITY MONITORING PLATFORM
+VALIDATION & KPI REPORT
+============================================================
+
+============================================================
+CLASSIFICATION VALIDATION
+============================================================
+  CV ROC-AUC : 0.9140 ± 0.0165
+  CV Recall  : 0.6824 ± 0.0324
+  CV F1      : 0.7749 ± 0.0238
+
+  Model Comparison Table:
+             model  test_roc_auc  test_recall_def  test_f1  test_avg_prec  cv_auc_mean  cv_auc_std  cv_recall_mean  cv_recall_std
+  GradientBoosting        0.9127           0.6957   0.7698         0.8733       0.9189      0.0152          0.6837         0.0390
+      RandomForest        0.9044           0.6770   0.7569         0.8634       0.9212      0.0138          0.7023         0.0394
+        ExtraTrees        0.8974           0.6770   0.7491         0.8539       0.9193      0.0168          0.6946         0.0440
+LogisticRegression        0.8725           0.7329   0.7284         0.8422       0.8934      0.0220          0.7457         0.0431
+
+  Full-Dataset Classification Report:
+              precision    recall  f1-score   support
+
+     Healthy       0.98      0.99      0.98      2007
+   Defective       0.98      0.94      0.96       806
+
+    accuracy                           0.98      2813
+   macro avg       0.98      0.97      0.97      2813
+weighted avg       0.98      0.98      0.98      2813
+
+
+============================================================
+CLUSTERING VALIDATION
+============================================================
+  Silhouette Score (PCA space): 0.6616
+
+  Cluster Statistics:
+         batch_count  defect_rate
+cluster                          
+0                407       0.3587
+1               1895       0.2132
+2                401       0.3641
+3                110       1.0000
+
+  Cluster Interpretations:
+    Cluster 0: Defect rate: 35.9%
+    Cluster 1: Defect rate: 21.3%
+    Cluster 2: Defect rate: 36.4%
+    Cluster 3: Defect rate: 100.0%
+
+============================================================
+ANOMALY DETECTION VALIDATION
+============================================================
+  Severity Distribution:
+anomaly_severity
+NORMAL         2012
+LOW RISK        775
+MEDIUM RISK      18
+CRITICAL          5
+HIGH RISK         3
+
+  Anomaly flag rate: 33.99%
+
+  Anomaly vs Defect cross-tab:
+Anomaly     0    1
+Defect            
+0        1471  536
+1         386  420
+
+============================================================
+INDUSTRIAL KPI SUMMARY
+============================================================
+  Total Batches                 : 2813
+  Defective Batches             : 806
+  Healthy Batches               : 2007
+  Overall Defect Rate           : 28.65%
+  Avg Temp Loss (°C)            : 65.9
+  High Temp Loss (n)            : 137
+  Anomalies Detected            : 956
+  Anomaly Rate                  : 33.99%

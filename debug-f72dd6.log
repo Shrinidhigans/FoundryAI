@@ -1,0 +1,3 @@
+{"sessionId": "f72dd6", "hypothesisId": "H2", "location": "pipeline.py:prepare_dashboard_dataframe", "message": "calling cached prepare", "data": {"input_rows": 10, "pickled_type": "bytes", "pickled_len": 10234}, "timestamp": 1779175932969}
+{"sessionId": "f72dd6", "hypothesisId": "H1", "location": "pipeline.py:_cached_prepare:entry", "message": "pickle cache read", "data": {"cache_key": "10_87_-4153023525481360984", "df_bytes_type": "bytes", "df_bytes_len": 10234}, "timestamp": 1779175932973}
+{"sessionId": "f72dd6", "hypothesisId": "H1", "location": "pipeline.py:_cached_prepare:exit", "message": "pickle read ok", "data": {"rows": 10, "cols": 87}, "timestamp": 1779175932976}

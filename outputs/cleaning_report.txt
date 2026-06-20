@@ -1,0 +1,148 @@
+======================================================================
+INDUSTRIAL DATA CLEANING REPORT — STAGE 1
+======================================================================
+
+Sheets found: ['Sheet1']
+Raw shape: (2813, 86)
+
+Column name mapping:
+  'Furnace Category'  →  'furnace_category'
+  'Furnace'  →  'furnace'
+  'Grade'  →  'grade'
+  'Pattern No'  →  'pattern_no'
+  'ITEM'  →  'item'
+  'Casting Sr. No.'  →  'casting_sr_no'
+  'Tapped wt.'  →  'tapped_wt'
+  'Pouring wt.'  →  'pouring_wt'
+  'Pigging'  →  'pigging'
+  'Last Heel Metal'  →  'last_heel_metal'
+  'Heel_Metal'  →  'heel_metal'
+  'Alloys'  →  'alloys'
+  'LCRCA 
+Addition 1'  →  'lcrca_addition_1'
+  'LCRCA
+Addition 2'  →  'lcrcaaddition_2'
+  'SG Pig
+Addition 1  '  →  'sg_pigaddition_1'
+  'SG Pig
+Addition 2'  →  'sg_pigaddition_2'
+  ' RR '  →  'rr'
+  'Boring'  →  'boring'
+  'Graphite'  →  'graphite'
+  'Silicon Addition 1 '  →  'silicon_addition_1'
+  'Silicon Addition 2'  →  'silicon_addition_2'
+  'Mn'  →  'mn'
+  'Low Re FSM'  →  'low_re_fsm'
+  'Zero Re FSM'  →  'zero_re_fsm'
+  'High Re FSM'  →  'high_re_fsm'
+  'Punching'  →  'punching'
+  'Ultraseed'  →  'ultraseed'
+  'Superseed'  →  'superseed'
+  'CS '  →  'cs'
+  'AL'  →  'al'
+  ' Preseed'  →  'preseed'
+  'Nickel'  →  'nickel'
+  'Copper'  →  'copper'
+  'Crom'  →  'crom'
+  'Phos'  →  'phos'
+  'Sulphur'  →  'sulphur'
+  'Furnace ON time'  →  'furnace_on_time'
+  'Furnace OFF time'  →  'furnace_off_time'
+  'Tap_Time_Cleaned'  →  'tap_time_cleaned'
+  'Zone'  →  'zone'
+  'Tapping Temp'  →  'tapping_temp'
+  'Pouring Temp'  →  'pouring_temp'
+  'Pouring time (sec)'  →  'pouring_time_sec'
+  'FSM'  →  'fsm'
+  'Barinoc'  →  'barinoc'
+  'Reseed'  →  'reseed'
+  'SB'  →  'sb'
+  'Bath S% '  →  'bath_s'
+  'CRCA'  →  'crca'
+  'SG Pig'  →  'sg_pig'
+  'Sorel_Total'  →  'sorel_total'
+  'Sorel_Addition'  →  'sorel_addition'
+  'RR'  →  'rr_1'
+  'Heel'  →  'heel'
+  'CE'  →  'ce'
+  'C %'  →  'c'
+  'Si %'  →  'si'
+  'Mn %'  →  'mn_1'
+  'P  %'  →  'p'
+  'S %'  →  's'
+  'Cr %'  →  'cr'
+  'Mo %'  →  'mo'
+  'Ni %'  →  'ni'
+  'Al  %'  →  'al_1'
+  'Cu    %'  →  'cu'
+  'Mg %'  →  'mg'
+  'Co %'  →  'co'
+  'Nb %'  →  'nb'
+  'Ti  %'  →  'ti'
+  'V   %'  →  'v'
+  'W  %'  →  'w'
+  'Pb  %'  →  'pb'
+  'Sn  %'  →  'sn'
+  'As %'  →  'as'
+  'Zr  %'  →  'zr'
+  'Ca %'  →  'ca'
+  'Ce  %'  →  'ce_1'
+  'Sb %'  →  'sb_1'
+  'B  %'  →  'b'
+  'Zn  %'  →  'zn'
+  'N  %'  →  'n'
+  'Fe   %'  →  'fe'
+  'AA'  →  'aa'
+  'FSMaddition /MT'  →  'fsmaddition_mt'
+  'Mg Recovery% '  →  'mg_recovery'
+  'DEFECTED '  →  'defected'
+
+Empty rows removed: 0
+Duplicate rows removed: 0
+Rows dropped (missing target): 0
+Defect distribution:
+defect
+0    2007
+1     806
+
+Leakage columns REMOVED (additive codes correlated with target):
+  ['heel_metal', 'nickel', 'copper', 'crom', 'phos', 'sulphur', 'mg']
+
+Traceability columns (excluded from ML):
+  ['furnace_category', 'furnace', 'grade', 'item', 'casting_sr_no', 'pigging', 'alloys', 'lcrcaaddition_2', 'boring', 'punching', 'furnace_on_time', 'furnace_off_time', 'tap_time_cleaned', 'zone', 'aa', 'pattern_no', 'mo', 'ca']
+
+Numeric columns identified: 59
+
+=== MISSING VALUES (before imputation) ===
+  n                                      446 (15.9%)
+  pouring_time_sec                       197 (7.0%)
+  tapping_temp                           158 (5.6%)
+  pb                                      90 (3.2%)
+  b                                       86 (3.1%)
+  pouring_temp                            85 (3.0%)
+  nb                                      70 (2.5%)
+  sb_1                                     2 (0.1%)
+  cr                                       1 (0.0%)
+  cu                                       1 (0.0%)
+  zn                                       1 (0.0%)
+  fe                                       1 (0.0%)
+  fsmaddition_mt                           1 (0.0%)
+
+Median imputation applied to all numeric columns.
+
+=== IMPOSSIBLE VALUE CHECKS ===
+  Tapping temperature °C: 6 rows outside [1200, 1600] → set to NaN
+  Pouring temperature °C: 2 rows outside [1200, 1600] → set to NaN
+  Carbon Equivalent: 7 rows outside [2.5, 5.0] → set to NaN
+
+=== OUTLIER CLIPPING (IQR × 3) ===
+
+Categorical columns kept: ['mg_recovery']
+
+=== FINAL CLEAN DATASET ===
+Shape           : (2813, 61)
+Numeric columns : 59
+Target balance  :
+defect
+0    2007
+1     806
